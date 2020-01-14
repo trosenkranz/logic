@@ -44,7 +44,7 @@ function(_add_quartus_simulation_files)
             MODELSIM_WARNING_AS_ERROR FALSE
             VERILATOR_CONFIGURATIONS
                 "lint_off -file \"${hdl_source}\""
-                "lint_off -msg STMTDLY -file \"${hdl_source}\""
+                "lint_off -rule STMTDLY -file \"${hdl_source}\""
         )
     endforeach()
 
@@ -61,7 +61,7 @@ function(_add_quartus_simulation_files)
             COMPILE ModelSim
             VERILATOR_CONFIGURATIONS
                 "lint_off -file \"${hdl_source}\""
-                "lint_off -msg STMTDLY -file \"${hdl_source}\""
+                "lint_off -rule STMTDLY -file \"${hdl_source}\""
             MODELSIM_SUPPRESS
                 2083
                 2186
