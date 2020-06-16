@@ -16,7 +16,7 @@ job1:
   only:
     - master
   script:
-    - source /home/fpga/.bashrc
+#    - source /home/fpga/.bashrc
     - mkdir build && cd build
     - cmake -G Ninja ..
     - cmake --build . --target all
